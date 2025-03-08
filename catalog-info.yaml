@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: etux0ecu4-java-springboot 
+  description: Secure Supply Chain Example for Spring Boot® using Maven sample HTTP/REST application based application with advanced continuous integration pipeline covering building, CVE scanning, security scanning, signatures,  attestations, SLSA provenance and SBOM along with Gitops-based continuous deployment   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=etux0ecu4-java-springboot
+    backstage.io/kubernetes-id: etux0ecu4-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: etux0ecu4-java-springboot
+    quay.io/repository-slug: rhtap/rhtap-qe-java-springboot
+  tags: ["java", "spring", "sscs", "sbom", "acs"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
